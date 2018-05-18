@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { PAGES_ROUTES } from './pages.routes';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,9 @@ import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { HeaderComponent } from '../shared/header/header.component';
 import { NopagefoundComponent } from '../shared/nopagefound/nopagefound.component';
 import { SharedModule } from '../shared/shared.module';
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+import { ChartsModule } from 'ng2-charts';
+import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
 
 @NgModule({
     declarations: [
@@ -17,6 +21,8 @@ import { SharedModule } from '../shared/shared.module';
         DashboardComponent,
         ProgressComponent,
         Graficas1Component,
+        IncrementadorComponent,
+        GraficoDonaComponent
     ],
     exports: [
         PagesComponent,
@@ -26,7 +32,9 @@ import { SharedModule } from '../shared/shared.module';
     ],
     imports: [
         SharedModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule
     ]
 })
 
